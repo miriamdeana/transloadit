@@ -2,7 +2,7 @@
 
 <h1>Upload a video</h1>
 <%= form_for Upload.new, :html => { :id => 'upload' } do |form| %>
-  <%= transloadit :image_resize %>
+  <%= transloadit :s3_store %>
   <%= form.label      :file, 'File to upload' %>
   <%= form.file_field :file %>
   <%= form.submit %>
